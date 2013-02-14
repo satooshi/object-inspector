@@ -1,4 +1,4 @@
-object-inspector
+Object Inspector
 ================
 
 PHP object inspector.
