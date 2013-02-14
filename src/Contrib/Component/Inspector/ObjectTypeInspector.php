@@ -76,6 +76,13 @@ class ObjectTypeInspector extends ObjectInspector
         //$this->inspectDocComment();
     }
 
+    // internal method
+
+    /**
+     * Inspect namespace.
+     *
+     * @return void
+     */
     protected function inspectNamespace()
     {
         if ($this->class->inNamespace()) {
@@ -83,6 +90,11 @@ class ObjectTypeInspector extends ObjectInspector
         }
     }
 
+    /**
+     * Inspect modifier.
+     *
+     * @return void
+     */
     protected function inspectModifier()
     {
         $modifiers = \Reflection::getModifierNames($this->class->getModifiers());
@@ -92,12 +104,22 @@ class ObjectTypeInspector extends ObjectInspector
         }
     }
 
+    /**
+     * Inspect class name.
+     *
+     * @return void
+     */
     protected function inspectClassName()
     {
         $this->inspection['shortname'] = $this->class->getShortName();
         $this->inspection['name']      = $this->class->getName();
     }
 
+    /**
+     * Inspect parent class.
+     *
+     * @return void
+     */
     protected function inspectParentClass()
     {
         $parentClass = $this->class->getParentClass();
@@ -107,6 +129,11 @@ class ObjectTypeInspector extends ObjectInspector
         }
     }
 
+    /**
+     * Inspect interface.
+     *
+     * @return void
+     */
     protected function inspectInterface()
     {
         $interfaces = $this->class->getInterfaces();
@@ -124,6 +151,11 @@ class ObjectTypeInspector extends ObjectInspector
         }
     }
 
+    /**
+     * Inspect trait.
+     *
+     * @return void
+     */
     protected function inspectTrait()
     {
         if (PHP_VERSION < '5.4') {
@@ -139,11 +171,21 @@ class ObjectTypeInspector extends ObjectInspector
         }
     }
 
+    /**
+     * Inspect file name.
+     *
+     * @return void
+     */
     protected function inspectFileName()
     {
         $this->inspection['filename'] = $this->class->getFileName();
     }
 
+    /**
+     * Inspect doc comment.
+     *
+     * @return void
+     */
     protected function inspectDocComment()
     {
         $doc = $this->class->getDocComment();
