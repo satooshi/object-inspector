@@ -1,0 +1,13 @@
+.buildpath
+.project
+.settings/
+build/
+vendor/
+composer.lock
+travis/
+cache.properties
+
+Annotation/
+Command/
+Template/
+
