@@ -73,10 +73,6 @@ class ObjectPropertyInspector extends ObjectInspector
         usort(
             $this->properties,
             function ($prop1, $prop2) {
-                if ($prop1->name === $prop2->name) {
-                    return 0;
-                }
-
                 return $prop1->name < $prop2->name ? -1 : 1;
             }
         );
@@ -176,9 +172,12 @@ class ObjectPropertyInspector extends ObjectInspector
         $className      = $this->class->getName();
         $declaringClass = $property->getDeclaringClass();
 
+        //TODO maybe dead code
+        /*
         if (false === $declaringClass) {
             return false;
         }
+        */
 
         $declaringClassName = $declaringClass->getName();
 

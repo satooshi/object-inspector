@@ -25,7 +25,7 @@ class TestObject
     {
     }
 
-    public function publicMethodArgs($noType, array $arrayType, $defaultValue = 'default value')
+    public function publicMethodArgs($noType, &$ref, \DateTime $classType, array $arrayType, $defaultValue = 'default value', array $typedDefaultValue = array())
     {
     }
 
@@ -48,7 +48,7 @@ class TestObject
     {
     }
 
-    protected function protectedMethodArgs($noType, array $arrayType, $defaultValue = 'default value')
+    protected function protectedMethodArgs($noType, &$ref, \DateTime $classType, array $arrayType, $defaultValue = 'default value', array $typedDefaultValue = array())
     {
     }
 
@@ -67,7 +67,7 @@ class TestObject
     {
     }
 
-    private function privateMethodArgs($noType, array $arrayType, $defaultValue = 'default value')
+    private function privateMethodArgs($noType, &$ref, \DateTime $classType, array $arrayType, $defaultValue = 'default value', array $typedDefaultValue = array())
     {
     }
 

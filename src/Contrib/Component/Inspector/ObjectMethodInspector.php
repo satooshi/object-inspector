@@ -54,10 +54,6 @@ class ObjectMethodInspector extends ObjectInspector
         usort(
             $this->methods,
             function ($method1, $method2) {
-                if ($method1->name === $method2->name) {
-                    return 0;
-                }
-
                 return $method1->name < $method2->name ? -1 : 1;
             }
         );

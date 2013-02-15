@@ -24,6 +24,8 @@
                 <directory>./vendor</directory>
                 <directory>./tests</directory>
                 <directory>./travis</directory>
+                <directory>./src/Contrib/Component/Annotation</directory>
+                <directory>./src/Contrib/Component/Command</directory>
             </exclude>
         </whitelist>
     </filter>
