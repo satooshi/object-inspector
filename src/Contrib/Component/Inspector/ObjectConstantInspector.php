@@ -96,9 +96,11 @@ class ObjectConstantInspector extends ObjectInspector
 
         foreach ($inspection as $name => $constant) {
             if (isset($constant['inherit'])) {
-                $sortedByInheritance['inherit'][$constant['inherit']['name']][$name] = $constant;
+                $className = $constant['inherit']['name'];
+                $sortedByInheritance['inherit'][$className][$name] = $constant;
             } elseif (isset($constant['override'])) {
-                $sortedByInheritance['override'][$constant['override']['name']][$name] = $constant;
+                $className = $constant['override']['name'];
+                $sortedByInheritance['override'][$className][$name] = $constant;
             } else {
                 $sortedByInheritance['declaring'][$name] = $constant;
             }

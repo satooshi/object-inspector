@@ -128,6 +128,7 @@ class ObjectTypeInspectorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $actual);
     }
 
+    // inspect()
     // getInspection()
 
     // plain object
