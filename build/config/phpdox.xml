@@ -10,6 +10,14 @@
         </collector>
         <generator output="build">
             <build engine="html" enabled="true" output="api"/>
+
+            <build engine="todo" enabled="false" output="api/todo">
+                <file name="todolist.txt" encoding="utf-8" />
+            </build>
+
+            <build engine="graph" enabled="true" output="api/graph">
+                <dot executable="/usr/local/bin/dot" render="true" format="png" />
+            </build>
         </generator>
     </project>
 </phpdox>
